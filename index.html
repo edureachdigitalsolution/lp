@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduReach Digital Solution</title>
+    <link rel="stylesheet" href="./output.css">
+    <!-- <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon"> -->
+</head>
+
+<body>
+    <nav
+        class="sticky top-0 z-50 flex items-center justify-between w-full h-18 px-6 md:px-16 lg:px-24 xl:px-32 backdrop-blur">
+        <a href="#!">
+            <img class="header-logo w-auto" alt="logo" src="./assets/dark-logo.png" />
+        </a>
+        <div class="hidden lg:flex items-center gap-8 transition duration-500">
+            <a href="#services" class="hover:text-slate-300 transition">
+                Services
+            </a>
+            <a href="#about" class="hover:text-slate-300 transition">
+                About
+            </a>
+            <a href="#testimonials" class="hover:text-slate-300 transition">
+                Testimonials
+            </a>
+            <a href="#contact" class="hover:text-slate-300 transition">
+                Contact
+            </a>
+        </div>
+        <div class="hidden lg:block space-x-3">
+            <button onclick="openModal()"
+                class="px-6 py-2 bg-indigo-600 hover:bg-indigo-700 transition text-white rounded-md active:scale-95">
+                Contact us
+            </button>
+            <!-- <button
+                class="hover:bg-slate-300/20 transition px-6 py-2 border border-slate-400 rounded-md active:scale-95">
+                Login
+            </button> -->
+        </div>
+        <button class="lg:hidden active:scale-90 transition" id="menu-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-menu size-6.5" aria-hidden="true">
+                <path d="M4 5h16"></path>
+                <path d="M4 12h16"></path>
+                <path d="M4 19h16"></path>
+            </svg>
+        </button>
+    </nav>
+
+    <div id="nav-links"
+        class="fixed inset-0 z-[100] bg-black/60 backdrop-blur flex flex-col items-center justify-center text-lg gap-8 lg:hidden transition-transform duration-400 -translate-x-full">
+        <a href="/#services">
+            Services
+        </a>
+        <a href="/#about">
+            About
+        </a>
+        <a href="/#testimonials">
+            Testimonials
+        </a>
+        <a href="/#contact">
+            Contact
+        </a>
+        <button type="button" id="close-menu"
+            class="active:ring-3 active:ring-white aspect-square size-10 p-1 items-center justify-center bg-slate-100 hover:bg-slate-200 transition text-black rounded-md flex">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-x" aria-hidden="true">
+                <path d="M18 6 6 18"></path>
+                <path d="m6 6 12 12"></path>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="flex flex-col items-center -mt-18">
+        <svg class="absolute -z-10 w-full -mt-40 md:mt-0" width="1440" height="676" viewBox="0 0 1440 676" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <rect x="-92" y="-948" width="1624" height="1624" rx="812" fill="url(#a)"></rect>
+            <defs>
+                <radialGradient id="a" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                    gradientTransform="rotate(90 428 292)scale(812)">
+                    <stop offset=".63" stop-color="#372AAC" stop-opacity="0"></stop>
+                    <stop offset="1" stop-color="#372AAC"></stop>
+                </radialGradient>
+            </defs>
+        </svg>
+        <a class="flex items-center mt-48 gap-2 border border-slate-600 text-gray-50 rounded-full px-4 py-2">
+            <div class="size-2.5 bg-green-500 rounded-full animate-pulse"></div>
+            <span>EduReach
+                Digital Solution</span>
+        </a>
+        <h1 class="text-center text-5xl leading-[68px] md:text-6xl md:leading-[70px] mt-4 font-semibold max-w-2xl">
+            Complete Digital Solutions for your Coaching Institute
+        </h1>
+        <p class="text-center text-base max-w-lg mt-2">
+            Custom Apps, Websites & Digital Marketing Solutions for your Coaching Institute.
+        </p>
+        <div class="flex items-center gap-4 mt-8">
+            <button onclick="openModal()"
+                class="flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 transition text-white active:scale-95 rounded-lg px-7 h-11">
+                Get started
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-arrow-right size-5" aria-hidden="true">
+                    <path d="M5 12h14"></path>
+                    <path d="m12 5 7 7-7 7"></path>
+                </svg>
+            </button>
+            <button class="border border-slate-400 active:scale-95 hover:bg-white/10 transition rounded-lg px-8 h-11">
+                Why Choose us
+            </button>
+        </div>
+        <section class="relative w-full max-w-6xl mx-auto mt-32">
+
+            <!-- Video -->
+            <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+
+                <video class="w-full h-full object-cover" autoplay muted loop playsinline style="max-height: 500px;">
+                    <source src="assets/video/video.mp4" type="video/mp4" />
+                </video>
+
+                <!-- Dark Overlay -->
+                <div class="absolute inset-0 bg-black/60"></div>
+
+                <!-- Content -->
+                <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
+
+                    <h2 class="text-white text-3xl md:text-5xl font-bold tracking-wide">
+                        Dr. Hariom Gangwar
+                    </h2>
+
+                    <p class="text-gray-200 text-lg md:text-xl mt-2">
+                        MBBS (KGMC)
+                    </p>
+
+                    <p class="text-emerald-400 text-lg md:text-xl font-semibold mt-1">
+                        Gangwar Institute
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+    </section>
+
+    <!-- Our Creations Section -->
+    <section class="flex flex-col items-center" id="why-choose">
+        <div class="flex flex-col items-center mt-32">
+            <h2 class="text-center text-4xl font-semibold max-w-2xl">
+                Why Choose
+                <span class="bg-gradient-to-t from-indigo-600 to-black p-1 bg-left inline-block bg-no-repeat">EduReach
+                    Digital Solution</span>
+            </h2>
+            <p class="text-center text-slate-400 max-w-lg mt-3">
+                EduReach Digital Solutions provides reliable, affordable, and custom-built digital platforms for
+                coaching institutes and teachers, focused on real growth and long-term success.
+
+
+            </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full max-w-5xl mt-18 mx-auto">
+
+            <!-- Card 1 -->
+            <div class="relative group h-[400px] rounded-xl overflow-hidden transition-all duration-500 
+                basis-full md:basis-1/2 lg:basis-1/3">
+                <img class="h-full w-full object-cover object-center" src="assets/images/first-card.avif" />
+                <div class="absolute inset-0 flex flex-col justify-end p-10 text-white bg-black/50">
+                    <h1 class="text-3xl font-semibold text-center">
+                        100% Custom App for Your Institute
+                    </h1>
+                    <p class="text-sm mt-2">
+                        We build fully customized mobile apps and websites designed specifically
+                        for your courses, branding, and teaching model
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="relative group h-[400px] rounded-xl overflow-hidden transition-all duration-500 
+                basis-full md:basis-1/2 lg:basis-1/3">
+                <img class="h-full w-full object-cover object-center" src="assets/images/second-card.avif" />
+                <div class="absolute inset-0 flex flex-col justify-end p-10 text-white bg-black/50">
+                    <h1 class="text-3xl font-semibold">
+                        One-Time Cost with No Renewal Fees
+                    </h1>
+                    <p class="text-sm mt-2">
+                        Pay once and own your digital platform completely.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="relative group h-[400px] rounded-xl overflow-hidden transition-all duration-500 
+                basis-full md:basis-1/2 lg:basis-1/3">
+                <img class="h-full w-full object-cover object-center" src="assets/images/third-cars.avif" />
+                <div class="absolute inset-0 flex flex-col justify-end p-10 text-white bg-black/50">
+                    <h1 class="text-3xl font-semibold text-[#4f39f6]">
+                        Proven Results & Scalable Growth
+                    </h1>
+                    <p class="text-sm mt-2">
+                        Designed to scale as your institute grows.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="flex flex-col items-center" id="services">
+        <div class="flex flex-col items-center mt-32">
+            <h2 class="text-center text-4xl font-semibold max-w-2xl">
+                Our
+                <span
+                    class="bg-gradient-to-t from-indigo-600 to-black p-1 bg-left inline-block bg-no-repeat">Services</span>
+            </h2>
+            <p class="text-center text-slate-400 max-w-lg mt-3">We help coaching institutes, teachers, and education
+                brands grow faster with custom apps, websites, branding, and digital marketing that attract more
+                students and deliver real results.</p>
+        </div>
+        <div
+            class="relative max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-8 md:px-0 mt-18 gap-6 md:gap-10 lg:gap-14">
+            <div class="py-10 border-b border-slate-700 md:py-0 md:border-b-0 md:px-10">
+                <div class="size-10 p-2 bg-indigo-600/20 border border-indigo-600/30 rounded">
+                    <img class="service-img" alt="" src="assets/images/website.png">
+                </div>
+                <div class="mt-5 space-y-2">
+                    <h3 class="text-base font-medium text-slate-200">Custom Mobile App & Website development</h3>
+                    <ul class="list-disc pl-5 text-sm text-slate-400 space-y-2">
+                        <li>Fully customized education mobile app</li>
+                        <li>Responsive and high-performance website</li>
+                        <li>Live classes & recorded video courses</li>
+                        <li>Online tests, quizzes & study materials</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="py-10 border-b border-slate-700 md:py-0 md:border-b-0 md:px-10">
+                <div class="size-10 p-2 bg-indigo-600/20 border border-indigo-600/30 rounded">
+                    <img class="service-img" alt="" src="assets/images/marketing.png">
+                </div>
+                <div class="mt-5 space-y-2">
+                    <h3 class="text-base font-medium text-slate-200">Social Media Marketing</h3>
+                    <ul class="list-disc pl-5 text-sm text-slate-400 space-y-2">
+                        <li>Community engagement</li>
+                        <li>Influencer marketing
+                        </li>
+                        <li>Paid social advertising
+                        </li>
+                        <li>Community engagement
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="py-10 border-b border-slate-700 md:py-0  md:border-b-0 md:px-10">
+                <div class="size-10 p-2 bg-indigo-600/20 border border-indigo-600/30 rounded">
+                    <img class="service-img " alt="" src="assets/images/upload.png">
+                </div>
+                <div class="mt-5 space-y-2">
+                    <h3 class="text-base font-medium text-slate-200">Content Upload & Management</h3>
+                    <ul class="list-disc list-inside marker:text-indigo-400 pl-2 text-sm text-slate-400 space-y-2">
+                        <li>Upload videos, PDFs, notes, and assignments easily</li>
+                        <li>Organize content by course, subject, and batch</li>
+                        <li>Edit, update, or delete content anytime</li>
+                        <li>Schedule content release for specific batches
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- <div class="py-10 border-b border-slate-700 md:py-0 md:border-b-0 md:px-10">
+                <div class="size-10 p-2 bg-indigo-600/20 border border-indigo-600/30 rounded">
+                    <img alt=""
+                        src="https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/aboutSection/puzzelEmoji.png">
+                </div>
+                <div class="mt-5 space-y-2">
+                    <h3 class="text-base font-medium text-slate-200">Plug-and-Play Integration</h3>
+                    <p class="text-sm text-slate-400">Simple setup with support for React, Next.js and Tailwind css.</p>
+                </div>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="flex flex-col items-center" id="testimonials">
+        <div class="flex flex-col items-center mt-32">
+            <h2 class="text-center text-4xl font-semibold max-w-2xl">Our
+                <span
+                    class="bg-gradient-to-t from-indigo-600 to-black p-1 bg-left inline-block bg-no-repeat">testimonials</span>
+            </h2>
+            <p class="text-center text-slate-400 max-w-lg mt-3">Success stories that reflect the quality, commitment,
+                and growth we deliver.
+            </p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-18 max-w-6xl mx-auto">
+            <div class="group border border-slate-800 p-6 rounded-xl">
+                <p class="text-slate-100 text-base"> “EduReach Digital Solutions completely transformed our
+                    institute’s digital presence. From mobile app development to
+                    admin access, everything was delivered exactly as promised.
+                    Their support team is responsive and truly understands the
+                    education domain.”</p>
+                <div class="flex items-center gap-3 mt-8 group-hover:-translate-y-1 duration-300">
+                    <img class="size-10 rounded-full" alt="user image" src="assets/images/man.png"></a>
+                    <div>
+                        <h2 class="text-gray-200 font-medium">Manish Arya</h2>
+                        <p class="text-indigo-500">O.M.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="group border border-slate-800 p-6 rounded-xl">
+                <p class="text-slate-100 text-base"> “We wanted a custom app and website for our students, and
+                    EduReach delivered beyond expectations. The teacher console,
+                    recorded lectures, and test features are smooth and easy to
+                    manage. Highly recommended for educators.”
+                </p>
+                <div class="flex items-center gap-3 mt-8 group-hover:-translate-y-1 duration-300">
+                    <img class="size-10 rounded-full" alt="user image" src="assets/images/man.png">
+                    <div>
+                        <h2 class="text-gray-200 font-medium">Rahul Mishra</h2>
+                        <p class="text-indigo-500">Academic Opps.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="group border border-slate-800 p-6 rounded-xl">
+                <p class="text-slate-100 text-base"> “EduReach helped us grow digitally from scratch. Branding,
+                    YouTube setup, thumbnails, and ad campaigns were handled
+                    professionally. The one-time cost model with no renewal is a
+                    big plus.
+                </p>
+                <div class="flex items-center gap-3 mt-8 group-hover:-translate-y-1 duration-300">
+                    <img class="size-10 rounded-full" alt="user image" src="assets/images/man.png">
+                    <div>
+                        <h2 class="text-gray-200 font-medium">kunal khandelwal</h2>
+                        <p class="text-indigo-500">marketing</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </section>
+
+    <!-- Trusted Companies Section -->
+    <!-- <section class="flex flex-col items-center">
+        <div class="flex flex-col items-center mt-32">
+            <h2 class="text-center text-4xl font-semibold max-w-2xl" style="opacity: 1; transform: none;">Trusted
+                <span
+                    class="bg-gradient-to-t from-indigo-600 to-black p-1 bg-left inline-block bg-no-repeat">companies</span>
+            </h2>
+            <p class="text-center text-slate-400 max-w-lg mt-3">A visual collection of our most recent works - each
+                piece crafted with intention, emotion, and style.
+            </p>
+        </div>
+        <div
+            class="relative max-w-5xl py-20 md:py-26 mt-18 md:w-full overflow-hidden mx-2 md:mx-auto border border-indigo-900 flex flex-col md:flex-row items-center justify-between bg-gradient-to-br from-[#401B98]/5 to-[#180027]/10 rounded-3xl p-4 md:p-10 text-white">
+            <div
+                class="absolute pointer-events-none top-10 -z-1 left-20 size-64 bg-gradient-to-br from-[#536DFF] to-[#4F39F6]/60 blur-[180px]">
+            </div>
+            <div
+                class="absolute pointer-events-none bottom-10 -z-1 right-20 size-64 bg-gradient-to-br from-[#536DFF] to-[#4F39F6]/60 blur-[180px]">
+            </div>
+            <div class="flex flex-col items-center md:items-start max-md:text-center">
+                <a href="#!"
+                    class="group flex items-center gap-2 rounded-full text-sm p-1 pr-3 text-indigo-300 bg-indigo-200/15">
+                    <span class="bg-indigo-600 text-white text-xs px-3.5 py-1 rounded-full">NEW</span>
+                    <p class="flex items-center gap-1">
+                        <span>Try 30 days free trial option </span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-chevron-right-icon lucide-chevron-right group-hover:translate-x-0.5 transition duration-300">
+                            <path d="m9 18 6-6-6-6"></path>
+                        </svg>
+                    </p>
+                </a>
+                <h1
+                    class="text-3xl font-medium max-w-xl mt-5 bg-gradient-to-r from-white to-[#b6abff] text-transparent bg-clip-text">
+                    Trusted by leading companies.
+                </h1>
+                <p class="text-base text-slate-400 max-w-lg mt-4">
+                    Built to integrate effortlessly with your existing tools, frameworks and workflows — so you can move
+                    faster.
+                </p>
+                <button
+                    class="flex items-center gap-1 text-sm px-6 py-2.5 border border-indigo-400 hover:bg-indigo-300/10 active:scale-95 transition rounded-full mt-6">
+                    Read more
+                    <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12.4243 5.42426C12.6586 5.18995 12.6586 4.81005 12.4243 4.57574L8.60589 0.757359C8.37157 0.523045 7.99167 0.523045 7.75736 0.757359C7.52304 0.991674 7.52304 1.37157 7.75736 1.60589L11.1515 5L7.75736 8.39411C7.52304 8.62843 7.52304 9.00833 7.75736 9.24264C7.99167 9.47696 8.37157 9.47696 8.60589 9.24264L12.4243 5.42426ZM0 5L0 5.6L12 5.6V5V4.4L0 4.4L0 5Z"
+                            fill="white"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="md:-mr-16 max-md:mt-10">
+                <img class="max-w-xs md:max-w-sm" alt=""
+                    src="https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/trusted-brand/image-fc6e.png">
+            </div>
+        </div>
+    </section> -->
+
+
+
+
+    <!---------FAQ section-->
+
+
+    <section class=" mt-10 max-w-6xl mx-auto mt-24 px-6 " id="faq">
+
+        <!-- Gradient Container -->
+        <div style="background:linear-gradient(45deg, #1800cd08, #4f39f654);"
+            class="rounded-3xl p-10 md:p-16 
+             
+              border border-indigo-500/20 shadow-2xl  border border-indigo-900 bg-gradient-to-br from-[#401B98]/5 to-[#180027]/10 ">
+
+            <!-- Heading -->
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-5xl font-bold text-white">
+                    Frequently Asked Questions
+                </h2>
+                <p class="text-slate-400 mt-4  max-w-2xl mx-auto">
+                    Everything you need to know about EduReach Digital Solutions.
+                </p>
+            </div>
+
+            <!-- FAQ Items -->
+            <div class="space-y-4 max-w-4xl mx-auto  mt-5">
+
+                <!-- Item -->
+                <div class="group border border-white/10 rounded-xl overflow-hidden bg-white/5 backdrop-blur-md">
+                    <button class="w-full flex justify-between items-center p-6 text-left text-white font-medium">
+                        Is EduReach suitable for coaching institutes and teachers?
+                        <span class="transition-transform duration-300 group-focus:rotate-45">+</span>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-slate-400">
+                        EduReach Digital Solutions is designed for coaching institutes, teachers,
+                        and education brands looking to grow digitally with custom apps and websites.
+                    </div>
+                </div>
+
+                <!-- Item -->
+                <div class="group border border-white/10 rounded-xl overflow-hidden bg-white/5 backdrop-blur-md">
+                    <button class="w-full flex justify-between items-center p-6 text-left text-white font-medium">
+                        Do you provide fully customized mobile apps and websites?
+                        <span>+</span>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-slate-400">
+                        Yes, we provide 100% customized mobile apps and websites based on
+                        your institute’s branding, courses, and requirements.
+                    </div>
+                </div>
+
+                <!-- Item -->
+                <div class="group border border-white/10 rounded-xl overflow-hidden bg-white/5 backdrop-blur-md">
+                    <button class="w-full flex justify-between items-center p-6 text-left text-white font-medium">
+                        Is there any yearly renewal or hidden cost?
+                        <span>+</span>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-slate-400">
+                        No, we follow a one-time cost model.
+                        There are no renewal fees or hidden charges involved.
+                    </div>
+                </div>
+
+                <!-- Item -->
+                <div class="group border border-white/10 rounded-xl overflow-hidden bg-white/5 backdrop-blur-md">
+                    <button class="w-full flex justify-between items-center p-6 text-left text-white font-medium">
+                        Will I get admin access and control over my app?
+                        <span>+</span>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-slate-400">
+                        Yes, you will get a complete teacher console and admin panel
+                        to manage content, students, and performance easily.
+                    </div>
+                </div>
+
+                <!-- Item -->
+                <div class="group border border-white/10 rounded-xl overflow-hidden bg-white/5 backdrop-blur-md">
+                    <button class="w-full flex justify-between items-center p-6 text-left text-white font-medium">
+                        Do you provide support after the project is completed?
+                        <span>+</span>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-slate-400">
+                        Yes, we offer dedicated technical support
+                        for upgrades, updates, and smooth platform operation.
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <script>
+        document.querySelectorAll(".group button").forEach(btn => {
+            btn.addEventListener("click", () => {
+                const content = btn.nextElementSibling;
+                content.classList.toggle("hidden");
+            });
+        });
+    </script>
+
+    <!-- Contact Section -->
+    <section class="flex flex-col items-center" id="contact">
+        <div class="flex flex-col items-center mt-16 md:mt-24 lg:mt-32">
+            <h2 class="text-center text-4xl font-semibold max-w-2xl">
+                Get in
+                <span class="bg-gradient-to-t from-indigo-600 to-black p-1 bg-left inline-block bg-no-repeat">
+                    touch
+                </span>
+            </h2>
+            <p class="text-center text-slate-400 max-w-lg mt-3">
+                Let’s discuss how we can bring your ideas to life and grow your education business together.
+            </p>
+        </div>
+        <form class="grid sm:grid-cols-2 gap-4 sm:gap-6 max-w-3xl mx-auto text-slate-400 mt-16 w-full p-4 leadForm">
+
+            <!-- Full Name -->
+            <div>
+                <label class="font-medium text-slate-200">Full Name</label>
+                <input type="text" name="fullname" placeholder="Enter your full name" class="w-full mt-2 p-3 outline-none border border-slate-700 rounded-lg 
+                   focus:ring-1 focus:ring-indigo-600 transition bg-transparent">
+            </div>
+
+            <!-- Email -->
+            <div>
+                <label class="font-medium text-slate-200">Email Address</label>
+                <input type="email" name="email" placeholder="Enter your email" class="w-full mt-2 p-3 outline-none border border-slate-700 rounded-lg 
+                   focus:ring-1 focus:ring-indigo-600 transition bg-transparent">
+            </div>
+
+            <!-- Phone Number -->
+            <div>
+                <label class="font-medium text-slate-200">Phone Number</label>
+                <input type="tel" name="phone" placeholder="Enter your phone number" class="w-full mt-2 p-3 outline-none border border-slate-700 rounded-lg 
+                   focus:ring-1 focus:ring-indigo-600 transition bg-transparent">
+                   <input type="hidden"  name="status"  value="New">
+            </div>
+
+            <!-- City -->
+            <div>
+                <label class="font-medium text-slate-200">City</label>
+                <input type="text" name="city" placeholder="Enter your city" class="w-full mt-2 p-3 outline-none border border-slate-700 rounded-lg 
+                   focus:ring-1 focus:ring-indigo-600 transition bg-transparent">
+            </div>
+
+            <!-- Services Dropdown -->
+            <div class="sm:col-span-2">
+                <label class="font-medium text-slate-200">Select Service</label>
+                <select name="service" class="w-full mt-2 p-3 outline-none border border-slate-700 rounded-lg 
+                   focus:ring-1 focus:ring-indigo-600 transition bg-transparent text-slate-400">
+                    <option value="">Choose a service</option>
+                    <option value="mobile-app">Mobile App Development</option>
+                    <option value="website">Website Development</option>
+                    <option value="marketing">Digital Marketing</option>
+                    <option value="branding">Branding & Design</option>
+                    <option value="complete-solution">Complete Digital Solution</option>
+                </select>
+            </div>
+
+            <!-- Message -->
+
+
+            <!-- Submit Button -->
+            <div class="sm:col-span-2 mt-4">
+                <button type="submit" class="flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 
+                   text-white px-8 py-3 rounded-full transition-all duration-300 hover:scale-105">
+                    Submit
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="size-4">
+                        <path d="M7 7h10v10"></path>
+                        <path d="M7 17 17 7"></path>
+                    </svg>
+                </button>
+            </div>
+
+        </form>
+    </section>
+
+    <!-- Subscribe Section -->
+    <section class="flex flex-col items-center">
+        <div class="flex flex-col items-center mt-32">
+            <h2 class="text-center text-4xl font-semibold max-w-2xl">Subscribe
+                <span
+                    class="bg-gradient-to-t from-indigo-600 to-black p-1 bg-left inline-block bg-no-repeat">newsletter</span>
+            </h2>
+            <p class="text-center text-slate-400 max-w-lg mt-3">
+                Stay updated with our latest features, product updates, and exclusive insights delivered directly to
+                your inbox.
+            </p>
+        </div>
+        <div
+            class="flex items-center justify-center mt-10 border border-slate-700 focus-within:outline focus-within:outline-indigo-600 text-sm rounded-full h-14 max-w-xl w-full">
+            <input class="bg-transparent outline-none rounded-full px-4 h-full flex-1 placeholder:text-slate-400"
+                placeholder="Enter your email address" type="text">
+            <button
+                class="bg-indigo-600 text-white rounded-full h-11 mr-1 px-10 flex items-center justify-center hover:bg-indigo-700 active:scale-95 transition">
+                Subscribe
+            </button>
+        </div>
+    </section>
+
+
+
+    <!-- Floating Contact Buttons -->
+    <div class="floating-contact">
+
+        <!-- WhatsApp -->
+        <a href="https://wa.me/919999999999" target="_blank" class="whatsapp-btn">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+        </a>
+
+        <!-- Call -->
+        <button type="button" onclick="openModal()" class="call-btn">
+            <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Call">
+        </button>
+
+    </div>
+
+
+
+
+
+    <!-- Modal Background -->
+    <div id="contactModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center 
+     opacity-0 pointer-events-none transition-all duration-300 z-50 ">
+
+        <!-- Modal Box -->
+        <div class="bg-slate-900 w-full max-w-3xl mx-4  relative 
+                transform scale-95 transition-all duration-300 p-4 " style="border-radius: 12px;">
+
+            <!-- Close Button -->
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white text-2xl">
+                &times;
+            </button>
+
+            <h5 class="text-center">Contact Us</h5>
+
+            <!-- Your Form -->
+            <form class="grid sm:grid-cols-2 gap-4 sm:gap-6 text-slate-400 p-6 leadForm">
+
+
+
+                <!-- Full Name -->
+                <div>
+                    <label class="font-medium text-slate-200">Full Name</label>
+                    <input type="text" name="fullname" placeholder="Enter your full name" class="w-full mt-2 p-3 outline-none border border-slate-700 rounded-lg 
+                   focus:ring-1 focus:ring-indigo-600 transition bg-transparent">
+                    <input type="hidden"  name="status"  value="New">
+                </div>
+
+                <!-- Email -->
+                <div>
+                    <label class="font-medium text-slate-200">Email Address</label>
+                    <input type="email" name="email" placeholder="Enter your email" class="w-full mt-2 p-3 outline-none border border-slate-700 rounded-lg 
+                   focus:ring-1 focus:ring-indigo-600 transition bg-transparent">
+                </div>
+
+                <!-- Phone Number -->
+                <div>
+                    <label class="font-medium text-slate-200">Phone Number</label>
+                    <input type="tel" name="phone" placeholder="Enter your phone number" class="w-full mt-2 p-3 outline-none border border-slate-700 rounded-lg 
+                   focus:ring-1 focus:ring-indigo-600 transition bg-transparent">
+                </div>
+
+                <!-- City -->
+                <div>
+                    <label class="font-medium text-slate-200">City</label>
+                    <input type="text" name="city" placeholder="Enter your city" class="w-full mt-2 p-3 outline-none border border-slate-700 rounded-lg 
+                   focus:ring-1 focus:ring-indigo-600 transition bg-transparent">
+                </div>
+
+                <!-- Services Dropdown -->
+                <div class="sm:col-span-2">
+                    <label class="font-medium text-slate-200">Select Service</label>
+                    <select name="service" class="w-full mt-2 p-3 outline-none border border-slate-700 rounded-lg 
+                   focus:ring-1 focus:ring-indigo-600 transition bg-transparent text-slate-400">
+                        <option value="">Choose a service</option>
+                        <option value="mobile-app">Mobile App Development</option>
+                        <option value="website">Website Development</option>
+                        <option value="marketing">Digital Marketing</option>
+                        <option value="branding">Branding & Design</option>
+                        <option value="complete-solution">Complete Digital Solution</option>
+                    </select>
+                </div>
+
+
+                <div class="sm:col-span-2 mt-4">
+                    <button type="submit"
+                        class="w-full bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded-full transition hover:scale-105">
+                        Submit
+                    </button>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+    <script>
+        function openModal() {
+            const modal = document.getElementById("contactModal");
+            modal.classList.remove("opacity-0", "pointer-events-none");
+            modal.querySelector("div").classList.remove("scale-95");
+        }
+
+        function closeModal() {
+            const modal = document.getElementById("contactModal");
+            modal.classList.add("opacity-0", "pointer-events-none");
+            modal.querySelector("div").classList.add("scale-95");
+        }
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/appwrite@14.0.0"></script>
+    <script>
+        const client = new Appwrite.Client()
+            .setEndpoint("https://nyc.cloud.appwrite.io/v1")
+            .setProject("698b1d7a00191a6055e1");
+
+        const databases = new Appwrite.Databases(client);
+
+        document.querySelectorAll(".leadForm").forEach(form => {
+            form.addEventListener("submit", async (e) => {
+                e.preventDefault();
+
+                // Detect which form fields exist
+                const name = form.elements["name"]?.value || form.elements["fullname"]?.value;
+                const number = form.elements["number"]?.value || form.elements["phone"]?.value;
+                const email = form.elements["email"]?.value;
+                const service = form.elements["service"]?.value;
+                const city = form.elements["city"]?.value || "";
+
+                const data = {
+                    name: name,
+                    number: number,
+                    email: email,
+                    service: service,
+                    city: city   // extra field (if not exist, will send empty)
+                };
+
+                try {
+                    await databases.createDocument(
+                        "698b1db100003673bd5c", // Database ID
+                        "leads",              // Collection ID
+                        Appwrite.ID.unique(),
+                        data
+                    );
+
+                    alert("✅ Lead submitted successfully");
+                    form.reset();
+
+                    const modalEl = form.closest(".modal");
+                    if (modalEl && window.bootstrap) {
+                        bootstrap.Modal.getInstance(modalEl)?.hide();
+                    }
+
+                } catch (err) {
+                    console.error(err);
+                    alert("❌ Submission failed");
+                }
+            });
+        });
+    </script>
+
+
+
+    <!-- Footer Section -->
+    <footer class="w-full  border-slate-300 bg-white py-6 px-6 md:px-16">
+
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+            <div>
+                <img class="footer-logo" src="./assets/dark-logo.png" alt="EduReach Logo" class="h-10 w-auto">
+            </div>
+
+            <!-- Left: Copyright -->
+            <p class="text-slate-500 text-sm text-center md:text-left">
+                © 2026 <span class="text-emerald-600 font-medium">
+                    EduReach Digital Solution
+                </span>. All Rights Reserved.
+            </p>
+
+            <!-- Center: Social Icons -->
+            <!-- <div class="flex items-center gap-6 text-emerald-600">
+           
+                <a href="#" class="hover:scale-110 transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                        <path
+                            d="M4.98 3.5C4.98 4.88 3.86 6 2.49 6S0 4.88 0 3.5 1.12 1 2.49 1s2.49 1.12 2.49 2.5zM0 8h5v16H0V8zm7.5 0h4.8v2.3h.07c.67-1.27 2.3-2.6 4.73-2.6 5.06 0 6 3.33 6 7.66V24h-5v-7.4c0-1.77-.03-4.05-2.47-4.05-2.47 0-2.85 1.93-2.85 3.92V24h-5V8z" />
+                    </svg>
+                </a>
+
+             
+                <a href="#" class="hover:scale-110 transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                        <path
+                            d="M12 2.2c3.2 0 3.6 0 4.9.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 3.2-1.6 4.8-4.9 4.9-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-3.2 1.6-4.8 4.9-4.9C8.4 2.2 8.8 2.2 12 2.2z" />
+                    </svg>
+                </a>
+
+           
+                <a href="#" class="hover:scale-110 transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                        <path
+                            d="M23.5 6.2s-.2-1.6-.8-2.3c-.8-.9-1.6-.9-2-.9C17.9 2.8 12 2.8 12 2.8h-.1s-5.9 0-8.7.2c-.4 0-1.2 0-2 .9-.6.7-.8 2.3-.8 2.3S0 8 0 9.8v1.4C0 13 0 14.8.4 16.6c0 0 .2 1.6.8 2.3.8.9 1.8.9 2.3 1 1.7.2 7.2.2 7.2.2s5.9 0 8.7-.2c.4 0 1.2 0 2-.9.6-.7.8-2.3.8-2.3.4-1.8.4-3.6.4-3.6V9.8c0-1.8-.4-3.6-.4-3.6zM9.8 14.6V7.4l6.3 3.6-6.3 3.6z" />
+                    </svg>
+                </a>
+            </div> -->
+
+            <!-- Right: Logo -->
+
+
+        </div>
+
+    </footer>
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
